@@ -1,4 +1,4 @@
-# 📒 Simple Contact Book Application
+# Simple Contact Book Application
 
 # List to store contact dictionaries
 contacts = []
@@ -17,7 +17,7 @@ def add_contact():
         "email": email,
         "address": address
     })
-    print("✅ Contact added!")
+    print(" Contact added!")
 
 # View all contacts
 def view_contacts():
@@ -40,7 +40,7 @@ def search_contact():
             print(f"Email: {c['email']}")
             print(f"Address: {c['address']}")
             return
-    print("❌ Contact not found.")
+    print(" Contact not found.")
 
 # Update existing contact
 def update_contact():
@@ -53,9 +53,9 @@ def update_contact():
             c['phone'] = input("New Phone: ") or c['phone']
             c['email'] = input("New Email: ") or c['email']
             c['address'] = input("New Address: ") or c['address']
-            print("✅ Contact updated!")
+            print(" Contact updated!")
             return
-    print("❌ Contact not found.")
+    print(" Contact not found.")
 
 # Delete a contact
 def delete_contact():
@@ -66,14 +66,14 @@ def delete_contact():
             confirm = input(f"Are you sure you want to delete {c['name']}? (y/n): ")
             if confirm.lower() == 'y':
                 contacts.pop(i)
-                print("🗑️ Contact deleted.")
+                print(" Contact deleted.")
             return
-    print("❌ Contact not found.")
+    print("Contact not found.")
 
 # Show menu and get user choice
 def main_menu():
     while True:
-        print("\n===== 📘 CONTACT BOOK MENU =====")
+        print("\n===== CONTACT BOOK MENU =====")
         print("1. Add Contact")
         print("2. View Contacts")
         print("3. Search Contact")
@@ -94,10 +94,10 @@ def main_menu():
         elif choice == '5':
             delete_contact()
         elif choice == '6':
-            print("👋 Exiting. Goodbye!")
+            print("Exiting. Goodbye!")
             break
         else:
-            print("❗ Invalid choice. Try again.")
+            print("Invalid choice. Try again.")
 
 # Start the app
 main_menu()
