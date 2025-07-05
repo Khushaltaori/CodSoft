@@ -16,12 +16,12 @@ while True:
     
     # Quit condition
     if user == 'Quit':
-        print("\n👋 Exiting Game...")
+        print("\n Exiting Game...")
         break
 
     # Validate user input
     if user not in choices:
-        print("❌ Invalid choice. Please try again.\n")
+        print(" Invalid choice. Please try again.\n")
         continue
 
     print("Computer chose:", computer)
@@ -29,27 +29,27 @@ while True:
 
     # Game logic
     if user == computer:
-        print("😐 It's a tie!\n")
+        print(" It's a tie!\n")
     elif (user == 'Rock' and computer == 'Scissors') or \
          (user == 'Paper' and computer == 'Rock') or \
          (user == 'Scissors' and computer == 'Paper'):
-        print("✅ You win this round!\n")
+        print("You win this round!\n")
         user_score += 1
     else:
-        print("❌ Computer wins this round!\n")
+        print(" Computer wins this round!\n")
         computer_score += 1
 
     # Show scoreboard
-    print(f"🏆 Scoreboard => You: {user_score} | Computer: {computer_score}\n")
+    print(f" Scoreboard => You: {user_score} | Computer: {computer_score}\n")
 
     # Ask to continue
     again = input("Do you want to play again? (yes/no): ").lower()
     if again != 'yes':
-        print("\n🏁 Final Score => You: {} | Computer: {}".format(user_score, computer_score))
+        print("\n Final Score => You: {} | Computer: {}".format(user_score, computer_score))
         if user_score > computer_score:
-            print("🎉 You won the game!")
+            print(" You won the game!")
         elif user_score < computer_score:
-            print("🤖 Computer won the game!")
+            print(" Computer won the game!")
         else:
-            print("😐 It's a tie overall!")
+            print(" It's a tie overall!")
         break
